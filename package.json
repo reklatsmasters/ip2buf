@@ -1,6 +1,6 @@
 {
   "name": "ip2buf",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "convert ip address to buffer",
   "main": "index.js",
   "author": "Dmitry Tsvettsikh <me@reklatsmasters.com>",

@@ -74,11 +74,16 @@ function v6(ip) {
   var groups = ip.split(':')
   var holes = 0 // empty octets
   var i = 0
+  var GROUPS = 8
 
   // ::1
   // 2001::  
   if (!groups[0] || !groups[groups.length - 1]) {
-    holes = 8 - (groups.length - 2) // ::1 => ['', '', 1]
+    if (net.isIPv4(groups[groups.length - 1])) {
+      GROUPS = 7
+    }
+
+    holes = GROUPS - (groups.length - 2) // ::1 => ['', '', 1]
     
     if (!groups[0]) {
       buf.fill(0, 0, holes * 2)
@@ -97,7 +102,7 @@ function v6(ip) {
     } else {
       buf.fill(0, 16 - holes * 2)
 
-      for (i = 0; i < (8 - holes); ++i) {
+      for (i = 0; i < (GROUPS - holes); ++i) {
         buf.writeUInt16BE(parseInt(groups[i], 16), i * 2)
       }
     }
@@ -108,7 +113,7 @@ function v6(ip) {
   // 2001:db8::ae21:ad12  
   for (i = 0; i < groups.length; ++i) {
     if (!groups[i]) {
-      holes = 8 - groups.length - 1
+      holes = GROUPS - groups.length - 1
       buf.fill(0, i * 2, i * 2 + holes * 2)
       
       continue

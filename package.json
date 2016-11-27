@@ -19,10 +19,13 @@
     "buffer"
   ],
   "dependencies": {
-    "ava": "^0.17.0",
     "safe-buffer": "^5.0.1"
   },
   "scripts": {
     "test": "ava"
+  },
+  "devDependencies": {
+    "ava": "^0.17.0",
+    "buffer-compare": "^1.1.1"
   }
 }

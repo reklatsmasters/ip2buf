@@ -1,0 +1,28 @@
+{
+  "name": "ip2buf",
+  "version": "0.0.0",
+  "description": "convert ip address to buffer",
+  "main": "index.js",
+  "author": "Dmitry Tsvettsikh <me@reklatsmasters.com>",
+  "bugs": {
+    "url": "https://github.com/reklatsmasters/ip2buf/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/reklatsmasters/ip2buf.git"
+  },
+  "license": "MIT",
+  "keywords": [
+    "ip",
+    "ipv6",
+    "ipv4",
+    "buffer"
+  ],
+  "dependencies": {
+    "ava": "^0.17.0",
+    "safe-buffer": "^5.0.1"
+  },
+  "scripts": {
+    "test": "ava"
+  }
+}

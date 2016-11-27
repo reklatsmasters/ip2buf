@@ -1,5 +1,6 @@
 import test from 'ava'
 import ip2buf, { v4, v6 } from './'
+var Buffer = require('safe-buffer').Buffer
 
 test('ip2buf', t => {
   t.is(Buffer.compare(ip2buf('127.0.0.1'), Buffer.from([0x7f, 0, 0, 1])), 0)

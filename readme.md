@@ -1,4 +1,6 @@
 # ip2buf
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/reklatsmasters/ip2buf.svg)](https://greenkeeper.io/)
 [![travis](https://travis-ci.org/reklatsmasters/ip2buf.svg)](https://travis-ci.org/reklatsmasters/ip2buf)
 [![npm](https://img.shields.io/npm/v/ip2buf.svg)](https://npmjs.org/package/ip2buf)
 [![license](https://img.shields.io/npm/l/ip2buf.svg)](https://npmjs.org/package/ip2buf)

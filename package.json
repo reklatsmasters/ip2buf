@@ -28,5 +28,8 @@
   "devDependencies": {
     "ava": "^0.17.0",
     "ipaddr.js": "^1.5.4"
+  },
+  "engines": {
+    "node": ">=6"
   }
 }

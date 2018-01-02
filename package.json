@@ -1,6 +1,6 @@
 {
   "name": "ip2buf",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Convert IPv4 or IPv6 address to the Buffer.",
   "main": "index.js",
   "author": "Dmitry Tsvettsikh <me@reklatsmasters.com>",

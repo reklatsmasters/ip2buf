@@ -4,8 +4,8 @@ import { pton4 } from '../'
 const EINVAL = 'Invalid value.'
 
 test('pton4', t => {
-  t.is(Buffer.compare(pton4('127.0.0.1'), Buffer.from([0x7f, 0, 0, 1])), 0)
-  t.is(Buffer.compare(pton4('255.255.255.255'), Buffer.from([0xff, 0xff, 0xff, 0xff])), 0)
+  t.is(Buffer.compare(pton4('127.0.0.1'), Buffer.from([0x7F, 0, 0, 1])), 0)
+  t.is(Buffer.compare(pton4('255.255.255.255'), Buffer.from([0xFF, 0xFF, 0xFF, 0xFF])), 0)
 })
 
 test('pton4 errors', t => {

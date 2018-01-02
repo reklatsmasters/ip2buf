@@ -6,14 +6,14 @@ const { constants: { IPV4_OCTETS, IPV6_OCTETS } } = require('./lib/util')
 
 const constants = {
   IPV4_OCTETS,
-  IPV6_OCTETS,
+  IPV6_OCTETS
 }
 
 module.exports = {
   pton,
   pton4,
   pton6,
-  constants,
+  constants
 }
 
 /**

@@ -12,25 +12,25 @@ test('pton6', t => {
   t.is(Buffer.compare(pton6('::1'), dest1), 0)
 
   const dest2 = Buffer.alloc(16)
-  dest2[0] = 0xfe
+  dest2[0] = 0xFE
   dest2[1] = 0x80
   dest2[15] = 1
   t.is(Buffer.compare(pton6('fe80::1'), dest2), 0)
 
   const dest3 = Buffer.alloc(16)
-  dest3[0] = 0xfe
+  dest3[0] = 0xFE
   dest3[1] = 0x80
   t.is(Buffer.compare(pton6('fe80::'), dest3), 0)
 
-  const dest4 = Buffer.from([0xfe, 0x80, 0, 0, 0, 0, 0, 0, 0x2a, 0xcf, 0xda, 0xff, 0xfe, 0xdd, 0x34, 0x2a])
+  const dest4 = Buffer.from([0xFE, 0x80, 0, 0, 0, 0, 0, 0, 0x2A, 0xCF, 0xDA, 0xFF, 0xFE, 0xDD, 0x34, 0x2A])
   t.is(Buffer.compare(pton6('fe80::2acf:daff:fedd:342a'), dest4), 0)
 
   t.is(Buffer.compare(pton6('fe80:0:0:0:2acf:daff:fedd:342a'), dest4), 0)
 
-  const dest5 = Buffer.from([0xfe, 0x80, 0, 0, 0, 0, 0, 0, 0x2a, 0xcf, 0xda, 0xff, 0x1, 0x2, 0x3, 0x4])
+  const dest5 = Buffer.from([0xFE, 0x80, 0, 0, 0, 0, 0, 0, 0x2A, 0xCF, 0xDA, 0xFF, 0x1, 0x2, 0x3, 0x4])
   t.is(Buffer.compare(pton6('fe80:0:0:0:2acf:daff:1.2.3.4'), dest5), 0)
 
-  const dest6 = Buffer.alloc(16, 0xff)
+  const dest6 = Buffer.alloc(16, 0xFF)
   t.is(Buffer.compare(pton6('ffff:ffff:ffff:ffff:ffff:ffff:255.255.255.255'), dest6), 0)
 })
 

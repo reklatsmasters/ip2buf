@@ -1,7 +1,7 @@
 {
   "name": "ip2buf",
   "version": "1.0.0",
-  "description": "convert ip address to buffer",
+  "description": "Convert IPv4 or IPv6 address to the Buffer.",
   "main": "index.js",
   "author": "Dmitry Tsvettsikh <me@reklatsmasters.com>",
   "bugs": {
@@ -16,16 +16,17 @@
     "ip",
     "ipv6",
     "ipv4",
-    "buffer"
+    "buffer",
+    "pton",
+    "pton4",
+    "pton6"
   ],
-  "dependencies": {
-    "safe-buffer": "^5.0.1"
-  },
+  "dependencies": {},
   "scripts": {
     "test": "ava"
   },
   "devDependencies": {
     "ava": "^0.17.0",
-    "buffer-compare": "^1.1.1"
+    "ipaddr.js": "^1.5.4"
   }
 }
